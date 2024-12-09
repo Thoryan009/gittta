@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Added your comment</h1>
+    <input id="text" type="text">
+    <button id="delete" disabled>Delete</button>
+
+    <div id="comment-box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta officiis nobis distinctio provident odio debitis tenetur alias cupiditate quos perferendis. Aperiam mollitia rem nulla, nisi iure laudantium ex facilis tenetur voluptatem neque, ullam libero maxime esse placeat suscipit dignissimos sapiente.</p>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta officiis nobis distinctio provident odio debitis tenetur alias cupiditate quos perferendis. Aperiam mollitia rem nulla, nisi iure laudantium ex facilis tenetur voluptatem neque, ullam libero maxime esse placeat suscipit dignissimos sapiente.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta officiis nobis distinctio provident odio debitis tenetur alias cupiditate quos perferendis. Aperiam mollitia rem nulla, nisi iure laudantium ex facilis tenetur voluptatem neque, ullam libero maxime esse placeat suscipit dignissimos sapiente.</p>
+    </div>
+    <a href=""></a>
+
+    <textarea cols="40" rows="20" id="cmt"></textarea>
+<button id="btn" >Post</button>
+
+    <script>
+
+        const textBox = document.getElementById("text")
+        const text = textBox.value;
+
+        const deleteBtn = document.getElementById("delete");
+
+        
+
+        document.getElementById('btn').addEventListener("click", function(){
+            const cmtbox = document.getElementById("cmt");
+            const cmt = cmtbox.value;
+           
+            const p = document.createElement('p');
+            p.innerText = cmt;
+
+           const commentBox =  document.getElementById("comment-box");
+           commentBox.appendChild(p);
+
+           cmtbox.value = '';
+
+           
+
+        })
+    </script>
+</body>
+</html>
